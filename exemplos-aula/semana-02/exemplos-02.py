@@ -51,15 +51,26 @@ total = preco_decimal1 + preco_decimal2
 print(total)  # 0.3 (Preciso)
 
 
+# Operacões com string
+nome = "  Gabriel ; BEnedito ; Pinheiro     "
+numero = "12,5"
+print(nome.strip())
+print(nome.lower())
+print(nome.upper())
+print(nome.replace(";", ""))
+print(numero.split(","))
+print(numero.isdigit())
+
+
 # f-string básica
 nome = "Carlos"
 idade = 30
 mensagem = f"Olá, meu nome é {nome} e tenho {idade} anos."
 print(mensagem)
 
-# Expressões dentro da f-string e formatação de decimais
+# Expressões dentro da f-string e formatação de casas decimais
 preco = 49.9
-print(f"O total com 10% de desconto é R$ {preco * 0.9:.2f}")
+print(f"O total com 10% de desconto é R$ {round(preco * 0.9, 2)}")
 
 
 #Identação e condição if
@@ -97,6 +108,7 @@ for fruta in ["maçã", "banana", "uva"]:
 for i in range(3):
     print(i)
 
+
 # Exemplo de WHILE
 print("--- WHILE ---")
 contador = 0
@@ -105,9 +117,15 @@ while contador < 3:
     contador += 1
 
 
-#tuple (e quando usar)
+#For + If + String
+for carro in ["Golf - Wolkswagen", "Corolla - Toyota", "City - Honda"]:
+    if "toyota" in carro.lower():
+        print("Eu achei um carro da Toyota")
+
+
+#tuple (Imutável) 
 # Coordenada geográfica (latitude, longitude)
-coordenada = (-23.5505, -46.6333)
+coordenada = (-23.5505, -46.6333) #índices [0, 1]
 
 # Tentativa de alteração geraria erro (TypeError):
 # coordenada[0] = 0.0
@@ -140,7 +158,7 @@ for categoria in categorias_endereco:
 print(usuario)
 
 
-#set (quando usar)
+#set (Não permite repetição)
 emails = ["a@email.com", "b@email.com", "a@email.com"]
 emails_unicos = set(emails)
 print(emails_unicos)  # {'b@email.com', 'a@email.com'} (duplicata removida)
@@ -195,7 +213,6 @@ else:
     print("Executado com sucesso (sem erros).")
 finally:
     print("Bloco executado sempre (com ou sem erro).")
-
 
 #raise
 def sacar(saldo: float, valor: float) -> float:
