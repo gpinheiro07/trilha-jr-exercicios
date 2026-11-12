@@ -197,7 +197,7 @@ print(f"Seu IMC é {resultado}")
 def saudar(nome: str, vezes: int = 1) -> str:
     return f"Olá, {nome}! " * vezes
 
-print(saudar("Carlos", 2))
+print(saudar(nome="Carlos", vezes=2))
 
 
 #try/except
