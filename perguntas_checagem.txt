@@ -1,0 +1,8 @@
+# Git e GitHub
+
+1. Quais são os três estados de um arquivo no Git e que comando leva de um ao
+seguinte? 
+
+2. Por que a semana-02 precisa nascer de uma main atualizada com git pull ?
+
+3. Numa revisão, quando escolher "Approve", "Request changes" ou "Comment"?

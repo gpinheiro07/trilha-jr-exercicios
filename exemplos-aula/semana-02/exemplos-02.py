@@ -1,15 +1,5 @@
-"""Recapitulação
-
-Perguntas de Checagem:
-1. Quais são os três estados de um arquivo no Git e que comando leva de um ao
-seguinte? 
-
-2. Por que a semana-02 precisa nascer de uma main atualizada com git pull ?
-
-3. Numa revisão, quando escolher "Approve", "Request changes" ou "Comment"?
-
-### Dúvidas
-git update-index --skip-worktree requests.py
+"""Dúvidas
+- git update-index --skip-worktree requests.py
 """
 
 """Extensões VS Code:
@@ -31,6 +21,7 @@ resposta = None  # NoneType (ausência de valor)
 print(isinstance(idade, int))  # True
 print(isinstance(altura, str))  # False
 print(isinstance(nome, (str, int)))  # True (aceita tupla de tipos)
+print(isinstance(ativo, int)) # True (python considera False e True como 0 e 1)
 
 
 # Problema com float (imprecisão)
