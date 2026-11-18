@@ -5,6 +5,7 @@
 """Extensões VS Code:
 - Python
 - Material Icon Theme
+ctrl + , => explorer.compactFolders
 """
 
 # O que é uma venv?

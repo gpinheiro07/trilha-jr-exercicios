@@ -6,3 +6,13 @@ seguinte?
 2. Por que a semana-02 precisa nascer de uma main atualizada com git pull ?
 
 3. Numa revisão, quando escolher "Approve", "Request changes" ou "Comment"?
+
+# Python I
+
+1. Por que um sistema financeiro não deve guardar dinheiro em float ? Como você
+guardaria R$ 12,50?
+
+2. Quando você usa uma lista e quando usa um dicionário?
+
+3. Qual é a diferença entre lançar uma exceção com raise e tratá-la com try/except ?
+Por que evitar um except sem tipo?
