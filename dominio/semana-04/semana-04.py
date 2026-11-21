@@ -9,6 +9,7 @@ mv dados/gastos-jan.bak backup/
 ls backup # gastos-jan.bak
 ls dados # gastos-fev.txt gastos-jan.txt
 
+
 #2.
 grep -rn "TODO" app/
 # app/calculo.py:2: # TODO: tratar a lista vazia
@@ -18,6 +19,7 @@ grep -rin "uber" dados/
 # dados/gastos-jan.txt:1:2026-01-06;Uber para o trabalho;2340
 # dados/gastos-jan.txt:3:2026-01-20;UBER volta;1980
 
+
 #3.
 ./relatorio.sh 
 # bash: ./relatorio.sh: Permission denied
@@ -26,6 +28,7 @@ ls -l relatorio.sh
 chmod +x relatorio.sh
 ./relatorio.sh 
 # Arquivos de dados: gastos-fev.txt gastos-jan.txt
+
 
 #4.
 KeyError (bugs.py, linha 18) -> Correção: gasto["valor_centavos"]
@@ -45,4 +48,27 @@ def total_da_categoria(gastos: list[dict], categoria: str) -> int:
             total += gasto["valor_centavos"]
     
     return total
+
+
+#5.
+consultar arquivo dividir.py
 """
+
+
+#6.
+import csv
+
+
+with open("dominio/semana-04/treino.csv", "w", newline="", encoding="utf-8") as arquivo:
+    escritor = csv.writer(arquivo)
+    escritor.writerow(["Almoço", 3550, "alimentação"])
+    escritor.writerow(["Jantar com a equipe", 8990, "alimentação"])
+    escritor.writerow(["Ônibus", 450, "transporte"])
+
+total = 0
+
+with open("dominio/semana-04/treino.csv", newline="", encoding="utf-8") as arquivo:
+    for descricao, valor, categoria in csv.reader(arquivo):
+        total += int(valor)
+
+print(total)
