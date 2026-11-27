@@ -139,8 +139,15 @@ usuario["email"] = "ana@email.com"  # Adiciona nova chave
 print(usuario.get("telefone", "Não cadastrado"))
 
 # Iterar sobre chaves, valores e itens
-for chave, valor in usuario.items():
-    print(f"{chave}: {valor}")
+# Toda variavel em python é um objeto e objetos possuem metodos (exemplo string possui o metodo .strip()
+# O metodo .items() é exclusivo de dicionarios e nos permite desempacator a chave e o valor do dicionario
+print(usuario.items()) # dict_items([('nome', 'Ana'), ('idade', 29), ('cidade', 'São Paulo'), ('email', 'ana@email.com')])
+print(usuario.keys()) # dict_keys(['nome', 'idade', 'cidade', 'email'])
+print(usuario.values()) # dict_values(['Ana', 29, 'São Paulo', 'ana@email.com'])
+
+for dado, informacao_usuario in usuario.items():
+    print(f"{dado}: {informacao_usuario}")
+
 
 # Criar uma chave em tempo de execução
 usuario = {}
